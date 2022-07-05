@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css" rel="stylesheet" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+
+    <div class="page-container  ">
+        <!-- header -->
+        <header class="header position-fixed top-0 end-0">
+            <div class="d-flex justify-content-between">
+                <button class="burger__menu">
+                    <span class="iconify" data-icon="ci:hamburger"></span>
+                </button>
+                <div class=" position-relative search">
+                    <div class="search_head position-relative ">
+                        <button class="search__start position-absolute">
+                            <i class="icon  fas fa-search fs-4 fw-bold"></i>
+                        </button>
+                        <input class="search__input" type="text" placeholder="Search or type a command">
+                        <button class="search__results">⌘ F</button>
+                    </div>
+                </div>
+                <div class=" d-flex justify-content-end align-items-center header__btns ms-auto">
+                    <button type="button" class="btn btn-link fs-6 fw-bolder" data-mdb-ripple-color="dark">Sign
+                        in</button>
+                    <button type="button" class="btn btn-primary  fw-bolder">Sign up</button>
+
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+
+        <!-- sidebar -->
+        <div class="sidebar d-flex flex-column position-fixed top-0 start-0 bottom-0">
+
+
+            <a href="#" class="sidebar__logo">
+                <img class="icon-pic" src="./img/logo-dark.png" alt="">
+
+            </a>
+
+            <div class=" d-flex flex-column sidebar__menu  mb-auto ">
+                <div class="sidebar__home d-flex align-items-center mb-2 text-muted fw-bold ">
+
+                    <span class="iconify" data-icon="eva:home-outline"></span> Home
+
+                </div>
+                <!-- Products -->
+                <div class="dropdown sidebar__top">
+                   
+                    <button class="btn btn-primary dropdown-toggle sidebar__head" type="button" id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        <span class="iconify" data-icon="ion:diamond"></span>
+                        products
+                    </button>
+                    <a class="sidebar__add" href="#">
+                        <span class="iconify" data-icon="akar-icons:plus"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                        <li><a class="dropdown-item" href="#">Drafts
+                                <div class="sidebar__counter">2</div>
+                            </a> </li>
+                        <li><a class="dropdown-item" href="#">Released</a></li>
+                        <li><a class="dropdown-item" href="#">Comments</a></li>
+                        <li><a class="dropdown-item" href="#">Scheduled
+                                <div class="sidebar__counter">8</div>
+                            </a></li>
+                    </ul>
+                </div>
+                <!--   Customers -->
+                <div class="dropdown sidebar__top">
+                    
+                    <button class="btn btn-primary dropdown-toggle sidebar__head" type="button" id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        <span class="iconify" data-icon="gg:profile"></span>
+                        customers
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Overview</a></li>
+                        <li><a class="dropdown-item" href="#">Customer list</a></li>
+
+                    </ul>
+                </div>
+                <!-- shop -->
+                <div class=" sidebar__top">
+                    
+                    <button class="btn btn-primary dropdown-toggle sidebar__head" type="button" id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        <span class="iconify" data-icon="gg:profile"></span>
+                        shop
+                    </button>
+                </div>
+                <!-- income -->
+                <div class="dropdown sidebar__top">
+                    
+                    <button class="btn btn-primary dropdown-toggle sidebar__head" type="button" id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        <span class="iconify" data-icon="ant-design:pie-chart-outlined"></span>
+                        income
+                    </button>
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Erning</a></li>
+                        <li><a class="dropdown-item" href="#">Refunds</a></li>
+                        <li><a class="dropdown-item" href="#">Payouts</a></li>
+                        <li><a class="dropdown-item" href="#">Statements</a></li>
+
+                    </ul>
+                </div>
+                <div class=" sidebar__top">
+                    
+                    <button class="btn btn-primary dropdown-toggle sidebar__head" type="button" id="dropdownMenuButton"
+                        data-mdb-toggle="dropdown" aria-expanded="false">
+                        <span class="iconify" data-icon="bx:store"></span>
+                        promote
+                    </button>
+                </div>
+            </div>
+            <button class="sidebar__toggle">
+                <span class="iconify" data-icon="bi:arrow-right"></span>
+            </button>
+            <!-- sidebarFooter -->
+            <div class=" sidebar__foot">
+                
+                <button class="help__foot">
+                    <span class="iconify" data-icon="clarity:help-line"></span>
+                    Help & getting started
+                    <div class="sidebar-counter">8</div>
+                </button>
+                <label class="theme-page mt-4 d-block position-relative" for="checkbox">
+                    <input class="position-absolute top-0 start-0 opacity-0" type="checkbox" id="checkbox">
+                    <span class="theme__inner">
+                        <span class="theme__box active">
+                            <span class="iconify" data-icon="akar-icons:sun-fill"></span>
+                            Light
+                        </span>
+                        <span class="theme__box">
+                            <span class="iconify" data-icon="bytesize:moon"></span>
+                            Dark
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <!-- end sidebar -->
+
+        <!-- page content -->
+        <div class="page-content d-flex flex-column">
+
+            <div class="d-flex flex-column page-wrapper">
+                <h1 class="page__title mb-4 fw-bolder">Dashboard</h1>
+                <div class="page__row d-flex ">
+                    <div class="col__page">
+                        <!-- card__wrap1 -->
+                        <div class="card__wrap">
+                            <div class="head__card d-flex align-items-center mb-4">
+                                <div class="card__title">Overview</div>
+                                <div class="dropdown-el">
+                                    <input type="radio" name="sortType" value="Relevance" checked="checked"
+                                        id="sort-relevance"><label for="sort-relevance">All time</label>
+                                    <input type="radio" name="sortType" value="Popularity" id="sort-best"><label
+                                        for="sort-best">In a year</label>
+                                    <input type="radio" name="sortType" value="PriceIncreasing" id="sort-low"><label
+                                        for="sort-low">Per month</label>
+
+                                    </d>
+                                </div>
+                            </div>
+                            <div class="overview">
+                                <div class="overview__nav d-flex p-2 mb-4">
+                                    <div class="overview_link active d-flex">
+                                        <div
+                                            class="overview__icon d-flex align-items-center justify-content-center me-3">
+                                            <span class="iconify" data-icon="arcticons:samsung-shop"></span>
+                                        </div>
+                                        <div class="overview_datails">
+                                            <span>Customers
+                                                <span class="iconify" data-icon="bi:info-circle-fill"></span>
+                                            </span>
+                                            <div class="overview__counter">1024</div>
+                                        </div>
+                                        <div class="balance d-flex align-items-center">
+                                            <span class="iconify" data-icon="bytesize:arrow-bottom"></span>
+                                            37.8%
+                                        </div>
+                                    </div>
+                                    <div class="overview_link d-flex">
+                                        <div
+                                            class="overview__icon d-flex align-items-center justify-content-center me-3">
+                                            <span class="iconify" data-icon="jam:activity"></span>
+                                        </div>
+                                        <div class="overview_datails">
+                                            <span>Income
+                                                <span class="iconify" data-icon="bi:info-circle-fill"></span>
+                                            </span>
+                                            <div class="overview__counter">256k</div>
+                                        </div>
+                                        <div class="balance d-flex align-items-center">
+                                            <span class="iconify" data-icon="bytesize:arrow-top"></span>
+                                            37.8%
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end overview__Nav -->
+                                <div class="overview_container">
+                                    <div>
+                                        <div class="users-head d-flex align-items-center mb-4">
+                                            <div class="users__info">
+                                                Welcome
+                                                <strong>857 customers</strong>
+                                                with a personal message 😎
+                                            </div>
+                                            <div class="users__button d-flex justify-content-center align-items-center">
+                                                Send
+                                                <span class="ms-1 fw-bolder">message</span>
+                                            </div>
+                                        </div>
+                                        <div class="users-list d-grid ">
+                                            <div class="user__item">
+                                                <div class="user__avatar">
+                                                    <img src="./img/profile1.jpg" alt="">
+                                                </div>
+                                                <div class="user__title">Gladyce</div>
+                                            </div>
+                                            <div class="user__item">
+                                                <div class="user__avatar">
+                                                    <img src="./img/profile2.jpg" alt="">
+                                                </div>
+                                                <div class="user__title">Elbert</div>
+                                            </div>
+                                            <div class="user__item">
+                                                <div class="user__avatar">
+                                                    <img src="./img/profile3.jpg" alt="">
+                                                </div>
+                                                <div class="user__title">Joyce</div>
+                                            </div>
+                                            <div class="user__item">
+                                                <div class="user__icon">
+                                                    <span class="iconify" data-icon="akar-icons:arrow-right"></span>
+                                                </div>
+                                                <div class="user__title">View all</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card__wrap1 -->
+                        <!-- card__wrap2 -->
+                        <div class="card__wrap">
+                            <div class="head__card d-flex align-items-center mb-4">
+                                <div class="card__title">Product views</div>
+
+                                <div class="btn-group dropdown__card">
+                                    <button class="btn btn-primary btn-lg dropdown-toggle" type="button"
+                                        data-mdb-toggle="dropdown" aria-expanded="false">
+                                        Last 7 days
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Last 7 days</a></li>
+                                        <li><a class="dropdown-item" href="#">This month</a></li>
+                                        <li><a class="dropdown-item" href="#">All time</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="overview">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                        <!-- end card__wrap2 -->
+                        <!-- card__wrap3 -->
+                        <div class="card__wrap">
+                            <div class="head__card d-flex align-items-center mb-4">
+                                <div class="card__title">Pro tips</div>
+
+                            </div>
+                            <div class="overview">
+
+                                <div class="overview_container">
+                                    <div>
+                                        <div class="users-head mb-4">
+                                            Need some ideas for the next product?
+                                        </div>
+                                        <div class="users-list d-grid ">
+                                            <!-- 1 -->
+                                            <div class="tip__item">
+                                                <div class="tip__icon d-flex align-items-center justify-content-center">
+                                                    <span class="iconify" data-icon="akar-icons:schedule"></span>
+                                                </div>
+                                                <div class="tip__details">
+                                                    <div class="tip__title mb-2">Early access</div>
+                                                    <div class="tip__line d-flex align-items-center">
+                                                        <div class="tip__status">New</div>
+                                                        <div class="tip__user">
+                                                            <div class="tip__avatar">
+                                                                <img src="./img/profile1.jpg" alt="">
+                                                            </div>
+                                                            <div class="tip__action">3 mins read</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 2 -->
+                                            <div class="tip__item">
+                                                <div class="tip__icon d-flex align-items-center justify-content-center">
+                                                    <span class="iconify" data-icon="bi:arrow-right"></span>
+                                                </div>
+                                                <div class="tip__details">
+                                                    <div class="tip__title mb-2">Asset use guidelines</div>
+                                                    <div class="tip__line d-flex align-items-center">
+                                                        <div class="tip__status">Small label</div>
+                                                        <div class="tip__user">
+                                                            <div class="tip__avatar">
+                                                                <img src="./img/profile1.jpg" alt="">
+                                                            </div>
+                                                            <div class="tip__action">Time</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 3 -->
+                                            <div class="tip__item">
+                                                <div class="tip__icon d-flex align-items-center justify-content-center">
+                                                    <span class="iconify"
+                                                        data-icon="material-symbols:design-services"></span>
+                                                </div>
+                                                <div class="tip__details">
+                                                    <div class="tip__title mb-2">Exclusive downloads</div>
+                                                    <div class="tip__line d-flex align-items-center">
+
+                                                        <div class="tip__user">
+                                                            <div class="tip__avatar">
+                                                                <img src="./img/profile2.jpg" alt="">
+                                                            </div>
+                                                            <div class="tip__action"> mins read</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 4 -->
+                                            <div class="tip__item">
+                                                <div class="tip__icon d-flex align-items-center justify-content-center">
+                                                    <span class="iconify" data-icon="bx:video"></span>
+                                                </div>
+                                                <div class="tip__details">
+                                                    <div class="tip__title mb-2">Behind the scenes</div>
+                                                    <div class="tip__line d-flex align-items-center">
+                                                        <div class="tip__status">Hot</div>
+                                                        <div class="tip__user">
+                                                            <div class="tip__avatar">
+                                                                <img src="./img/profile3.jpg" alt="">
+                                                            </div>
+                                                            <div class="tip__action">3 mins read</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 5 -->
+                                            <div class="tip__item">
+                                                <div class="tip__icon d-flex align-items-center justify-content-center">
+                                                    <span class="iconify" data-icon="charm:phone"></span>
+                                                </div>
+                                                <div class="tip__details">
+                                                    <div class="tip__title mb-2">Asset use guidelines</div>
+                                                    <div class="tip__line d-flex align-items-center">
+                                                        <div class="tip__status">popular</div>
+                                                        <div class="tip__user">
+                                                            <div class="tip__avatar">
+                                                                <img src="./img/profile1.jpg" alt="">
+                                                            </div>
+                                                            <div class="tip__action">Time</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- 6 -->
+                                            <div class="tip__item">
+                                                <div class="tip__icon d-flex align-items-center justify-content-center">
+                                                    <span class="iconify" data-icon="bx:select-multiple"></span>
+                                                </div>
+                                                <div class="tip__details">
+                                                    <div class="tip__title mb-2">Life & work updates</div>
+                                                    <div class="tip__line d-flex align-items-center">
+
+                                                        <div class="tip__user">
+                                                            <div class="tip__avatar">
+                                                                <img src="./img/profile3.jpg" alt="">
+                                                            </div>
+                                                            <div class="tip__action">3 mins read</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card__wrap3 -->
+                        <!-- card__wrap4 -->
+                        <div class="card__wrap">
+                            <div class="head__card d-flex align-items-center mb-4">
+                                <div class="card__title">Get more customers!</div>
+
+                            </div>
+                            <div class="overview">
+
+                                <div class="overview_container">
+                                    <div>
+                                        <div class="users-head mb-4">
+                                            50% of new customers explore products because the author sharing the
+                                            work on the social media network. Gain your earnings right now! 🔥
+                                        </div>
+
+                                    </div>
+                                    <div class="media__btns d-flex">
+                                        <button class="media__button">
+                                            <span class="iconify" data-icon="brandico:facebook"></span>
+                                            <span>facebook</span>
+                                        </button>
+                                        <button class="media__button">
+                                            <span class="iconify" data-icon="iconoir:twitter"></span>
+                                            <span>twitter</span>
+                                        </button>
+                                        <button class="media__button">
+                                            <span class="iconify" data-icon="cib:instagram"></span>
+                                            <span>instagram</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end card__wrap4 -->
+                    </div>
+                    <!-- end col-8 -->
+                    <div class="col__page">
+                        <!-- card__right1 -->
+                        <div class="card__right">
+                            <div class="card_head">
+                                <div class="card_title">
+                                    Popular products
+                                </div>
+                            </div>
+                            <div class="popular">
+                                <div class="popular__head">
+                                    <div class="popular__stage">Products</div>
+                                    <div class="popular__stage">Earning</div>
+                                </div>
+                                <div class="popular__list">
+                                    <div class="popular__item">
+
+                                        <div class="popular__preview">
+                                            <img src="./img/product-pic-1@2x.jpg" />
+                                        </div>
+                                        <div class="popular__title">Crypter - NFT UI kit</div>
+                                        <div class="popular__details">
+                                            <div class="popular__price">$2,453.80</div>
+                                            <div class=" popular__status">Active</div>
+                                        </div>
+                                    </div>
+                                    <div class="popular__item">
+                                        <div class="popular__preview">
+                                            <img src="./img/product-pic-2@2x.jpg" />
+                                        </div>
+                                        <div class="popular__title">Bento Matte 3D illustration 1.0</div>
+                                        <div class="popular__details">
+                                            <div class="popular__price">$105.60</div>
+                                            <div class=" popular__status">Deactive</div>
+                                        </div>
+                                    </div>
+                                    <div class="popular__item">
+                                        <div class="popular__preview">
+                                            <img src="./img/product-pic-3@2x.jpg" />
+                                        </div>
+                                        <div class="popular__title">Excellent material 3D chair</div>
+                                        <div class="popular__details">
+                                            <div class="popular__price">$648.60</div>
+                                            <div class=" popular__status">Active</div>
+                                        </div>
+                                    </div>
+                                    <div class="popular__item">
+                                        <div class="popular__preview">
+                                            <img src="./img/product-pic-4@2x.jpg" />
+                                        </div>
+                                        <div class="popular__title">Fleet - travel shopping kit</div>
+                                        <div class="popular__details">
+                                            <div class="popular__price">$648.60</div>
+                                            <div class=" popular__status">Active</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="popular__button">Allproducts</button>
+
+                            </div>
+                        </div>
+                        <!-- end card__right1 -->
+
+                        <!-- card__right2 -->
+                        <div class="card__right">
+                            <div class="card_head">
+                                <div class="card_title">
+                                    Comments
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review__list">
+                                    <div class="review__item">
+                                        <div class="review__avatar">
+                                            <img src="./img/profile1.jpg" alt="Avatar">
+                                        </div>
+                                        <div class="review__details">
+                                            <div class="review__line d-flex align-items-center">
+                                                <div class="review__user me-auto">
+                                                    <span class="review__title fw-bold">Ethel</span>
+                                                    <span class="review__login">@ethel</span>
+                                                </div>
+                                                <div class="review__time">1h</div>
+                                            </div>
+                                            <div class="review__product">On <strong>Smiles – 3D icons</strong></div>
+                                            <div class="review__content ">Great work 😊</div>
+                                            <div class="review__control">
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bx:message-detail"></span>
+
+                                                </button>
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bi:heart"></span>
+                                                </button>
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bi:link"
+                                                        data-flip="horizontal,vertical"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__item">
+                                        <div class="review__avatar">
+                                            <img src="./img/profile2.jpg" alt="Avatar">
+                                        </div>
+                                        <div class="review__details">
+                                            <div class="review__line d-flex align-items-center">
+                                                <div class="review__user me-auto">
+                                                    <span class="review__title fw-bold">Ethel</span>
+                                                    <span class="review__login">@ethel</span>
+                                                </div>
+                                                <div class="review__time">1h</div>
+                                            </div>
+                                            <div class="review__product">On <strong>Smiles – 3D icons</strong></div>
+                                            <div class="review__content ">Great work 😊</div>
+                                            <div class="review__control">
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bx:message-detail"></span>
+
+                                                </button>
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bi:heart"></span>
+                                                </button>
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bi:link"
+                                                        data-flip="horizontal,vertical"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__item">
+                                        <div class="review__avatar">
+                                            <img src="./img/profile3.jpg" alt="Avatar">
+                                        </div>
+                                        <div class="review__details">
+                                            <div class="review__line d-flex align-items-center">
+                                                <div class="review__user me-auto">
+                                                    <span class="review__title fw-bold">Ethel</span>
+                                                    <span class="review__login">@ethel</span>
+                                                </div>
+                                                <div class="review__time">1h</div>
+                                            </div>
+                                            <div class="review__product">On <strong>Smiles – 3D icons</strong></div>
+                                            <div class="review__content ">Great work 😊</div>
+                                            <div class="review__control">
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bx:message-detail"></span>
+
+                                                </button>
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bi:heart"></span>
+                                                </button>
+                                                <button class="review__link">
+                                                    <span class="iconify" data-icon="bi:link"
+                                                        data-flip="horizontal,vertical"></span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button class="review__button">View
+                                    all
+                                    </ذ>
+                            </div>
+                        </div>
+                        <!-- end card__right2 -->
+
+                        <!-- card__right3 -->
+                        <div class="card__right">
+                            <div class="card_head">
+                                <div class="card_title">
+                                    Refund requestsd
+                                </div>
+                            </div>
+                            <div class="refund">
+                                <div class="refund__list">
+                                    <div class="refund__item d-flex">
+                                        <div class="refund__icon d-flex align-items-center justify-content-center">
+                                            <span class="iconify" data-icon="bi:basket"></span>
+                                        </div>
+                                        <div class="refund__content">
+                                            You have
+                                            <strong>52 open refund requests</strong>
+                                            to action. This includes
+                                            <strong>8 new requests</strong>
+                                            . 👀
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="refund__btn">Review refund requests</button>
+                            </div>
+                        </div>
+                        <!-- end card__right3-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<!-- jquery cdn -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+<!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"></script>
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="./script.js"></script>
+
+</html>
